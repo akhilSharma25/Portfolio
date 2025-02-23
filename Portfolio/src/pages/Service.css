@@ -1,0 +1,125 @@
+/* Basic reset to prevent layout issues */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color-scheme: light dark; /* Retained as requested */
+  }
+  
+  /* Services Section */
+  .section-services {
+    padding: 96px 0;
+    background-color: #f4f3f1; /* Light background to avoid white screen */
+    min-height: 100vh; /* Ensures content fills screen */
+  }
+  
+  .section-services .container {
+    max-width: 1400px; /* Wide container for full screen */
+    padding: 40px 24px;
+    margin: 0 auto;
+  }
+  
+  .section-services .container:first-child {
+    text-align: center;
+  }
+  
+  .section-services .main-heading {
+    position: relative;
+    text-transform: capitalize;
+    font-size: 54px;
+    line-height: 1.1;
+    font-weight: bold;
+    color: #242425; /* Dark text */
+    margin-bottom: 48px;
+  }
+  
+  .section-services .main-heading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 50%;
+    height: 5px;
+    background: #646cf1; /* Button color */
+    transform: translateX(-50%);
+  }
+  
+  .section-services .grid-three-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Strict 3 columns */
+    gap: 64px;
+    width: 100%; /* Full width */
+    max-width: 1400px; /* Matches container */
+    margin: 0 auto;
+  }
+  
+  .section-services .card {
+    background: #ffffff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .section-services .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .section-services .card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .section-services .card-details {
+    padding: 24px;
+  }
+  
+  .section-services .card-details .grid-two-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .section-services .card-details p {
+    font-size: 16px;
+    color: #242425; /* Dark text */
+    margin: 0;
+  }
+  
+  .section-services .card-details h2 {
+    font-size: 24px;
+    color: #646cf1; /* Button color */
+    margin: 12px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-services .grid-three-cols {
+      grid-template-columns: 1fr; /* Stack vertically on mobile */
+      gap: 48px;
+    }
+  
+    .section-services .main-heading {
+      font-size: 40px;
+    }
+  
+    .section-services .card-img img {
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-services .main-heading {
+      font-size: 32px;
+    }
+  
+    .section-services .card-details h2 {
+      font-size: 20px;
+    }
+  
+    .section-services .card-details p {
+      font-size: 14px;
+    }
+  }

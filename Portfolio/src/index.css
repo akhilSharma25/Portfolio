@@ -1,0 +1,515 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color-scheme: light dark;
+}
+
+:root {
+  --bg-color: #f4f3f1;
+  --btn-color: #646cf1;
+  --dark-color: #242425;
+  --helper-color: #99b9f1;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Basic Style */
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 5.4rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.06rem;
+}
+
+a {
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--btn-color);
+  text-decoration: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* Layout Rules */
+.container {
+  max-width: 140rem;
+  padding: 4rem 2.4rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-two-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Define 3-column grid for services */
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Reusable */
+button {
+  text-transform: capitalize;
+  padding: 1rem 2.2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background: var(--btn-color);
+  border-radius: 0.8rem;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: border-color 0.3s;
+}
+
+.secondary-btn {
+  background: transparent;
+  box-shadow: inset 0 0 0 0.2rem var(--btn-color);
+  margin-left: 3.2rem;
+}
+
+/* State Rules */
+button:hover {
+  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+}
+
+a:hover,
+a.active {
+  color: #535bf2;
+}
+
+.main-heading {
+  position: relative;
+  text-transform: capitalize;
+}
+
+.main-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 0.5rem;
+  background: var(--btn-color);
+}
+
+/* Hero Section */
+.section-hero {
+  & .grid {
+    align-items: center;
+  }
+  .hero-content {
+    & p {
+      margin: 2.4rem 0 4.8rem 0;
+      &:first-child {
+        margin: 0 0 1.2rem 0;
+      }
+    }
+  }
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    & img {
+      width: 80%;
+      height: auto;
+    }
+  }
+}
+
+/* Analytical CSS */
+.section-analytics {
+  margin: 9.6rem 0;
+  & .container {
+    background: var(--bg-color);
+    border-radius: 1rem;
+  }
+  & .grid {
+    color: var(--dark-color);
+    & .div1 {
+      text-align: center;
+      border-right: 0.2rem solid var(--dark-color);
+      padding-right: 15px;
+      &:last-child {
+        border: none;
+      }
+      & h2 {
+        font-size: 4.8rem;
+      }
+      & p {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.social-links a {
+  margin: 0 1.5rem;
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 3rem;
+  height: 3rem;
+  transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+  transform: scale(1.1);
+}
+
+/* Contact */
+.section-contact {
+  & .contact-content {
+    padding: 0;
+    & h1 {
+      margin-bottom: 3.2rem;
+    }
+  }
+  & .container {
+    padding-top: 3.2rem;
+  }
+  & .contact-img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    & img {
+      width: 80%;
+      height: auto;
+    }
+  }
+  & .section-form {
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+    & label {
+      display: block;
+      margin-bottom: 1.2rem;
+      text-transform: capitalize;
+    }
+    & input,
+    textarea {
+      width: 80%;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+}
+
+/* Error Page */
+#error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+#error-page .content {
+  max-width: 60rem;
+  padding: 4rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#error-page .header {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #646cf1;
+  margin-bottom: 2rem;
+}
+
+#error-page h4 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+#error-page p {
+  font-size: 1.8rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+#error-page .btns {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#error-page .btns a {
+  padding: 1.2rem 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #646cf1;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#error-page .btns a:hover {
+  background-color: #4a57e5;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Login & Registration */
+.section-login,
+.section-registration {
+  padding: 5rem 0;
+}
+
+.login-form,
+.registration-form {
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h1,
+.registration-form h1 {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+form label {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+form input {
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: var(--btn-color);
+}
+
+form button {
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  background-color: var(--btn-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #4a57e5;
+}
+
+/* Admin Users Table */
+.admin-users {
+  overflow-x: auto;
+  background: #2f2f2f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #333333;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #444444;
+  color: #dcdcdc;
+}
+
+th {
+  background-color: #646cf1;
+  color: #f1f1f1;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+tr:hover {
+  background-color: #444444;
+}
+
+td:nth-child(4),
+td:nth-child(5) {
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+tr {
+  font-size: 15px;
+}
+
+td:nth-child(4):hover {
+  color: #28a745;
+  text-decoration: underline;
+}
+
+td:nth-child(5):hover {
+  color: #dc3545;
+  text-decoration: underline;
+}
+
+/* Services Section */
+.section-services {
+  padding: 9.6rem 0;
+  background: var(--bg-color);
+}
+
+.section-services .container:first-child {
+  text-align: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.card-img img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 2.4rem;
+}
+
+.card-details h2 {
+  font-size: 2.4rem;
+  color: var(--btn-color);
+  margin: 1.2rem 0;
+}
+
+.card-details p {
+  font-size: 1.6rem;
+  color: var(--dark-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-three-cols {
+    grid-template-columns: 1fr; /* Stack vertically on smaller screens */
+  }
+
+  .main-heading {
+    font-size: 4rem;
+  }
+
+  .card-img img {
+    height: 15rem;
+  }
+
+  .card-details {
+    padding: 1.6rem;
+  }
+
+  .card-details h2 {
+    font-size: 2rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 3.2rem;
+  }
+
+  .card-details h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-details p {
+    font-size: 1.4rem;
+  }
+}
