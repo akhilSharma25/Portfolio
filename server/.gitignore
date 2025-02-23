@@ -1,15 +1,7 @@
-.env
-# Ignore environment files
-.env
-.env.local
-.env.development
-.env.production
+# Ignore .env in server folder
+server/.env
 
-# Ignore node_modules (if using Node.js)
+# Other common ignores
 node_modules/
-
-# Ignore build outputs (if applicable)
-dist/
-build/
-# Ignore logs
 *.log
+dist/
