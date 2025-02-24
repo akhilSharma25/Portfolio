@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":"node server/server.js",
+    "build":"npm install && npm install --prefix Portfolio && npm run build --prefix Portfolio",
+    "start": "node server/server.js",
+    "type":"module"
   },
   "keywords": [],
   "author": "",

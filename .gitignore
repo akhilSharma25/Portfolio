@@ -1,7 +1,7 @@
 # Ignore .env in server folder
-server/.env
+.env
 
 # Other common ignores
-node_modules/
-*.log
-dist/
+node_modules
+.log
+dist
