@@ -14,7 +14,7 @@ const EditUser = () => {
 
         const fetchUser = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/admin/users/${id}`, {
+                const response = await fetch(`https://portfolio-pdrk.onrender.com/api/admin/users/${id}`, {
                     method:"GET",
                     headers: { Authorization: authorizationToken }
                 });
@@ -38,7 +38,7 @@ const EditUser = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3000/api/admin/users/update/${id}`, {
+            const response = await fetch(`https://portfolio-pdrk.onrender.com/api/admin/users/update/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",

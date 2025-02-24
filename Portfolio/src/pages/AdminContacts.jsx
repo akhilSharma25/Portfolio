@@ -10,7 +10,7 @@ export const AdminContacts = () => {
     // Fetch all contacts
     const getAllContacts = async () => {
         try {
-            const response = await fetch("http://localhost:3000/api/admin/contacts", {
+            const response = await fetch("https://portfolio-pdrk.onrender.com/api/admin/contacts", {
                 method: "GET",
                 headers: {
                     Authorization: authorizationToken,

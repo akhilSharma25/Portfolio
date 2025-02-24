@@ -39,7 +39,7 @@ const Contact = () => {
     // setContact({ username: '', email: '', message: '' }); // Clear the form
 
     try {
-    const response=  await fetch("http://localhost:3000/api/form/contact",{
+    const response=  await fetch("https://portfolio-pdrk.onrender.com/api/form/contact",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"

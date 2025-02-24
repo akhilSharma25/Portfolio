@@ -20,7 +20,7 @@ const path=require("path")
 const __dirname=path.resolve()
 //handle cors
 const corsOptions={
-    origin:"http://localhost:5173",
+    origin:"https://portfolio-pdrk.onrender.com",
     methods:"GET,PUT,POST,DELETE,PATCH,HEAD",
     Credentials:true,
 }
