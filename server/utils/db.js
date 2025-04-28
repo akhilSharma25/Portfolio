@@ -1,5 +1,4 @@
 const mongoose=require('mongoose')
-const password="AKHIL2005"
 
 const URL=process.env.MONGODB_URI
 const connectDb=async()=>{
